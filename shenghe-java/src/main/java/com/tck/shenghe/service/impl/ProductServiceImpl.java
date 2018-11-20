@@ -2,7 +2,10 @@ package com.tck.shenghe.service.impl;
 
 import com.tck.shenghe.dataobject.ProductInfo;
 import com.tck.shenghe.dto.CartDTO;
+import com.tck.shenghe.enums.ProductStatusEnum;
+import com.tck.shenghe.repository.ProductInfoRepository;
 import com.tck.shenghe.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,10 @@ import java.util.List;
  **/
 @Service
 public class ProductServiceImpl implements ProductService {
+
+    @Autowired
+    private ProductInfoRepository repository;
+
     @Override
     public ProductInfo findOne(String productId) {
         return null;
@@ -23,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return null;
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
     @Override
