@@ -25,6 +25,7 @@ Component({
    */
   methods: {
     onLike: function (event) {
+
       let like = this.properties.like
       let count = this.properties.count
 
@@ -34,6 +35,10 @@ Component({
         like: !like
       })
 
+      let behavior = this.properties.like ? 'like' : 'cancel'
+      this.triggerEvent('like', {
+        behavior: behavior
+      }, {})
     }
   }
 })
