@@ -1,5 +1,6 @@
 package com.tck.shenghe.dataobject;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -20,9 +21,12 @@ public class ClassicInfo {
     private String content;
     private String image;
     private Integer type;
-    private Integer fav_nums;
-    private Integer index;
-    private Integer like_status;
+    @JsonProperty("fav_nums")
+    private Integer favNumber;
+    @JsonProperty("index")
+    private Integer issueNumber;
+    @JsonProperty("like_status")
+    private Integer likeStatus;
 
 }
 

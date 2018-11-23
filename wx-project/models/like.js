@@ -5,7 +5,7 @@ import {
 class LikeModel extends HTTP {
 
     like(behavior, artID, category) {
-        let url = behavior == 'like' ? 'like' : 'like/cancel'
+        let url = behavior == 'like' ? 'classic/like/add' : 'classic/like/cancel'
         this.request({
             url: url,
             method: "POST",
