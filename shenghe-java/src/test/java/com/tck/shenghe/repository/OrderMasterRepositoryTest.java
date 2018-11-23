@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
@@ -36,5 +38,9 @@ public class OrderMasterRepositoryTest {
     }
     @Test
     public void findByBuyerOpenid() {
+
+        Page<OrderMaster> byBuyerOpenid = repository.findByBuyerOpenid("110110",  PageRequest.of(0, 1));
+
+        System.out.println(byBuyerOpenid.getTotalElements());
     }
 }

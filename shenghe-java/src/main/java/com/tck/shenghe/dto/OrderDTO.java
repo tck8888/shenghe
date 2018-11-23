@@ -19,8 +19,6 @@ import java.util.List;
  * @Date:2018/11/20
  **/
 @Data
-//@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDTO {
 
     /** 订单id. */

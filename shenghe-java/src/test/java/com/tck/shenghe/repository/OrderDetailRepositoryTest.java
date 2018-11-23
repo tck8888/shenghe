@@ -1,6 +1,7 @@
 package com.tck.shenghe.repository;
 
 import com.tck.shenghe.dataobject.OrderDetail;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -38,5 +40,7 @@ public class OrderDetailRepositoryTest {
 
     @Test
     public void findByOrderId() {
+        List<OrderDetail> byOrderId = repository.findByOrderId("111111111");
+        Assert.assertNotEquals(0,byOrderId.size());
     }
 }
