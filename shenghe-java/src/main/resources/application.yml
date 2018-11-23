@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 380054728mnb@
+    password: root
     url: jdbc:mysql://212.64.34.164:2206/shenghe?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
