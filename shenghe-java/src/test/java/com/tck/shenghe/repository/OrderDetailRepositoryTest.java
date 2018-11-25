@@ -28,13 +28,13 @@ public class OrderDetailRepositoryTest {
     @Test
     public void saveTest() {
         OrderDetail orderDetail = new OrderDetail();
-        orderDetail.setDetailId("123456789");
+        orderDetail.setDetailId("12345678910");
         orderDetail.setOrderId("111111111");
         orderDetail.setProductId("1111111112");
         orderDetail.setProductIcon("http://xxx.png");
-        orderDetail.setProductName("皮蛋瘦肉粥");
-        orderDetail.setProductPrice(new BigDecimal(1.2));
-        orderDetail.setProductQuantity(2);
+        orderDetail.setProductName("鸡翅");
+        orderDetail.setProductPrice(new BigDecimal(2.20));
+        orderDetail.setProductQuantity(3);
         repository.save(orderDetail);
     }
 
